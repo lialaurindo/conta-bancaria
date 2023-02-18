@@ -44,7 +44,7 @@ public class Menu {
 
 			opcao = leia.nextInt();
 			if(opcao == 9) {
-				System.out.println("Sistema finalizado");
+				System.out.println("Sistema Finalizado.");
 				System.exit(0);
 			}
 			switch(opcao){
