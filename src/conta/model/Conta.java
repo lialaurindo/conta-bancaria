@@ -48,7 +48,7 @@ public class Conta {
 	}
 	public boolean sacar(float valor) {
 		if(this.getSaldo() < valor) {
-			System.out.println(Cores.TEXT_PURPLE_BOLD+"\nSaldo insuficiente..."+ Cores.TEXT_RESET);
+			System.out.println("\nSaldo Insuficiente");
 			return false;
 		}
 		this.setSaldo(this.getSaldo() - valor);
