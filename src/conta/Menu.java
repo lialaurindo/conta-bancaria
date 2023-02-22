@@ -3,24 +3,32 @@ package conta;
 import java.util.Scanner;
 
 import conta.model.Conta;
-import conta.util.Cores;
+import conta.model.ContaCorrente;
 
 public class Menu {
 
 	public static void main(String[] args) {
 		
-		Scanner leia = new Scanner(System.in);
-		Conta c = new Conta(1, 123, 1, "Maria Silva", 10000.0f);
-		int opcao;
 		
+		//Utilizando métodos da superClasse Conta
+		Conta c = new Conta(1, 123, 1, "Maria Silva", 10000.0f);
 		c.visualizar();
 		System.out.println(c.getSaldo());
-		
 		c.depositar(1000);
 		c.sacar(500);
 		System.out.println();
 		System.out.println(c.getSaldo());
 		System.out.println();
+		
+		
+		//Utilizando métodos da subClasse ContaCorrente
+		ContaCorrente c1 = new ContaCorrente(2, 321, 1, "Jose Silva", 5000.0f, 1000.0f);
+		c1.visualizar();
+		c1.sacar(5900);
+		
+		//MENU PARA GERENCIAR CONTAS
+		Scanner leia = new Scanner(System.in);
+		int opcao;
 		
 		while(true) {
 			System.out.println("___________________________________________________________________");
