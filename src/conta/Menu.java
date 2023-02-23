@@ -3,7 +3,6 @@ package conta;
 import java.io.IOException;
 import java.util.Scanner;
 
-import conta.model.Conta;
 import conta.model.ContaCorrente;
 import conta.model.ContaPoupanca;
 import conta.util.Cores;
@@ -12,7 +11,9 @@ public class Menu {
 
 	public static void main(String[] args) {
 
-		// Utilizando métodos da superClasse Conta
+		/* Utilizando métodos da superClasse Conta
+		 * Usado quando ainda não tinhamos tornado a classe Absctract
+		 * 
 		Conta c = new Conta(1, 123, 1, "Maria Silva", 10000.0f);
 		c.visualizar();
 		System.out.println(c.getSaldo());
@@ -21,7 +22,8 @@ public class Menu {
 		System.out.println();
 		System.out.println(c.getSaldo());
 		System.out.println();
-
+		 */
+		
 		// Utilizando métodos da subClasse ContaCorrente
 		ContaCorrente c1 = new ContaCorrente(2, 321, 1, "Jose Silva", 5000.0f, 1000.0f);
 		c1.visualizar();
@@ -33,13 +35,14 @@ public class Menu {
 
 		
 		//Usando no Input
+		
+		Scanner leia = new Scanner(System.in);
 		int opcao, numero, agencia, tipo, aniversario, numeroDestino;
 		float saldo, limite, valor;
 		String titular;
 
 		// MENU PARA GERENCIAR CONTAS
-		Scanner leia = new Scanner(System.in);
-		int opcao;
+		
 
 		while (true) {
 			System.out.println("___________________________________________________________________");
