@@ -62,9 +62,9 @@ public abstract class Conta {
 		case 1 -> tipo = "Conta Corrente";
 		case 2 -> tipo = "Conta Poupança";
 		}
-		System.out.println("________________________________________");
-		System.out.println("         GERENCIADOR DE CONTAS          ");
-		System.out.println("________________________________________");
+		System.out.println("___________________________________________________________________");
+		System.out.println("                      GERENCIADOR DE CONTAS                        ");
+		System.out.println("___________________________________________________________________");
 		System.out.println("Conta: "+ this.numero);
 		System.out.println("Agência: "+ this.agencia);
 		System.out.println("Tipo de Conta: "+ tipo);
